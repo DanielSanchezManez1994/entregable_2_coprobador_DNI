@@ -8,12 +8,11 @@ dni = prompt("Porfavor introduce un DNI")
 let numero = "";
 let letra = dni[dni.length-1].toUpperCase();
 
-for(let i = 0; i < dni.length - 2; i++){
+for(let i = 0; i < dni.length - 2; i++){git
         numero += dni[i]
 }
-numero = Number(numero)
 
-if(0 < numero <= 999999){
+if(0 < numero && numero <= 999999){
     let letra2 = letras[numero % 23]
     mensaje += `DNI: ${numero} · Letter: ${letra}\nResto de la divición: ${numero % 23}\nLetra calculada ${letra2}\n`
     if(letra == letra2) resultado = `El número y la letra del DNI son correctos.`
